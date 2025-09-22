@@ -26,8 +26,10 @@ How to manipulate categories using the console of this python web program.
 `category.save()`
 
 ## Delete an object (category)
-```category = DishCategory.objects.get(name="Десерти")
-category.delete()```
+```
+category = DishCategory.objects.get(name="Десерти")
+category.delete()
+```
 
 ## List all object (categories)
 `DishCategory.objects.all()`
