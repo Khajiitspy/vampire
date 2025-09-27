@@ -1,0 +1,17 @@
+Activate .venv:
+	source .venv/bin/activate
+
+To run the app:
+ go the project directory and write:
+	py manage.py runserver 4892
+
+For convenient library work:
+	To save the libraries:
+		pip freeze > requirements.txt
+	To load librarires and install them:
+
+Migrations:
+	Make migration:
+		py manage.py makemigrations
+	Commit migration:
+		py manage.py migrate

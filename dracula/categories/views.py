@@ -28,10 +28,11 @@ def edit_category(request, category_id):
         form = CategoryForm(instance=category)
     return render(request, 'edit_category.html', {'form': form, 'category': category})
 
-
 def delete_category(request, category_id):
     category = get_object_or_404(Category, id=category_id)
     if request.method == 'POST':
+        if category.image:
+            category.image.delete(save=False)
         category.delete()
         return redirect('categories:show_categories')
     return render(request, 'delete_category.html', {'category': category})
